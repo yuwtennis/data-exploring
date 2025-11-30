@@ -1,6 +1,7 @@
 services:
-    minimal-notebook:
-      image: 'jupyter/minimal-notebook:x86_64-python-3.11'
+    notebook:
+      container_name: notebook
+      image: 'jupyter/pyspark-notebook:x86_64-python-3.11'
       restart: always
       environment:
         - GRANT_SUDO=yes
