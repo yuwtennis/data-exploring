@@ -1,7 +1,8 @@
 services:
     notebook:
+      build: .
       container_name: notebook
-      image: 'jupyter/pyspark-notebook:x86_64-python-3.11'
+      user: root
       restart: always
       environment:
         - GRANT_SUDO=yes
